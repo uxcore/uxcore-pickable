@@ -1,9 +1,9 @@
 {
   "name": "uxcore-pickable",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "uxcore-pickable component for uxcore.",
   "repository": "https://github.com/uxcore/uxcore-pickable.git",
-  "author": "yanbingbing",
+  "author": "onbing",
   "main": "src/index.js",
   "scripts": {
     "dev": "gulp server"
