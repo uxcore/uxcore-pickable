@@ -43,7 +43,7 @@ React.render(<div>
 
 ## demo
 
-http://uxcore.github.io/components/pickable/
+http://uxco.re/components/pickable/
 
 ## API
 
