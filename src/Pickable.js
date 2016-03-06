@@ -7,6 +7,8 @@
  */
 
 const classnames = require("classnames");
+const React = require('react'); 
+const ReactDOM = require('react-dom');
 
 class Items {
   constructor(props, onChange) {
