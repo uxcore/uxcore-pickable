@@ -55,6 +55,13 @@ class Demo extends React.Component {
             })}
           </Pickable>
         </div>
+        <div>
+          <Pickable onChange={this.handleChange.bind(this)} value={this.state.value} type="hook">
+            {items.map((item, index) => {
+              return <Item key={index} value={item.value} number={item.num} disabled={item.disable}>{item.text}</Item>
+            })}
+          </Pickable>
+        </div>
       </div>;
     }
 };
