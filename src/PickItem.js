@@ -12,11 +12,13 @@ class PickItem extends React.Component {
     }
   }
 
-  renderNum() {
+  renderTips() {
     const me = this;
     const {type, prefixCls, number} = me.props;
     if (type === 'simple' && number !== undefined) {
       return <span className={`${prefixCls}-num`}>{number}</span>
+    }else if(type === 'hook'){
+      return <i className={`${prefixCls}-icon-hook`}></i>
     }
   }
 
@@ -28,10 +30,11 @@ class PickItem extends React.Component {
          [`${prefixCls}`]: true,
          'active': active,
          'disabled': disabled,
-         [`${prefixCls}-simple`]: type === 'simple'
+         [`${prefixCls}-simple`]: type === 'simple',
+         [`${prefixCls}-hook`]: type === 'hook'
        })} onClick={me.handleClick.bind(me, value)}>
         {children}
-        {me.renderNum()}
+        {me.renderTips()}
       </div>
     )
   }
@@ -51,7 +54,7 @@ PickItem.propTypes = {
   ]),
   // only useful in simple type now.
   number: React.PropTypes.number,
-  type: React.PropTypes.oneOf(['normal', 'simple']),
+  type: React.PropTypes.oneOf(['normal', 'simple', 'hook']),
 }
 
 PickItem.displayName = 'PickItem';
