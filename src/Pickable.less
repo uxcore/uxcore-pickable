@@ -7,97 +7,101 @@
  */
 
 @__pickable_prefix_cls: kuma-pickable;
-
-
 .@{__pickable_prefix_cls}-item {
-    display: inline-block;
-    height: 28px;
-    padding: 0 20px;
-    line-height: 26px;
-    border: 1px solid @border-color;
-    margin-right: 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    color: @text-primary-color;
-    &:hover {
-        border-color: @brand-primary-light;
-        background: @brand-primary-lighter;
-    }
-    &.active {
-        border-color: @brand-primary-light;
-        background: @brand-primary;
-        color: white;
-    }
-    &.disabled {
-        background: @bg-disabled-color;
-        color: @text-disabled-color;
-        border-color: @bg-disabled-color;
-        cursor: not-allowed;
-    }
+  display: inline-block;
+  height: 28px;
+  padding: 0 20px;
+  line-height: 26px;
+  border: 1px solid @border-color;
+  margin-right: 4px;
+  margin-bottom: 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: @normal-alpha-3;
+  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  &:hover {
+    border-color: @border-hover-color;
+    color: @normal-alpha-2;
+  }
+  &:focus,
+  &.active {
+    border-color: @brand-primary;
+    background: @brand-primary;
+    color: white;
+  }
+  &.multiple-active {
+    padding: 0 12px;
+  }
+  &.disabled {
+    background: @bg-disabled-color;
+    color: @text-disabled-color;
+    border-color: @bg-disabled-color;
+    cursor: not-allowed;
+  }
+  .@{__pickable_prefix_cls}-item-icon-clear {
+    font-weight: 700;
+    padding-left: 9px;
+  }
 }
 
 .@{__pickable_prefix_cls}-item-simple {
-    border: none;
+  border: 1px solid transparent;
+  background: white;
+  margin-right: 4px;
+  color: @normal-alpha-2;
+  &:hover {
     background: white;
-    margin-right: 20px;
-    padding: 0;
-    &:hover {
-        background: white;
-        color: @text-primary-color;
-    }
-    &.active {
-        color: @brand-primary;
-        background: white;
-        .@{__pickable_prefix_cls}-item-num {
-            color: @brand-primary;
-            background: @brand-primary-lighter;
-        }
-    }
-    &.disabled {
-        background: white;
-        color: @text-disabled-color;
-        border-color: @bg-disabled-color;
-        cursor: not-allowed;
-    }
+    border-color: transparent;
+  }
+  &.active {
+    border-color: @brand-primary;
+    background: @brand-primary;
+    color: white;
     .@{__pickable_prefix_cls}-item-num {
-        background: @basic-400;
-        color: @text-thirdary-color;
-        display: inline-block;
-        min-width: 26px;
-        text-align: center;
-        height: 16px;
-        line-height: 16px;
-        margin-left: 9px;
+      background: transparent;
+      color: white;
     }
-
+  }
+  &.disabled {
+    background: white;
+    color: @text-disabled-color;
+    border-color: transparent;
+    cursor: not-allowed;
+  }
+  .@{__pickable_prefix_cls}-item-num {
+    background: @basic-400;
+    color: @text-thirdary-color;
+    display: inline-block;
+    min-width: 26px;
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+    margin-left: 9px;
+  }
 }
 
 .@{__pickable_prefix_cls}-item-hook {
-    
-    &.active {
-        border-color: @brand-primary-light;
-        background: white;
-        background: linear-gradient(-45deg, transparent 11px, white 0),             
-              linear-gradient(45deg, transparent 15px, @brand-primary-light 0);
-        position: relative;
-        color: @text-primary-color;
-        i.kuma-pickable-item-icon-hook {
-            position: absolute;
-            height: 10px;
-            line-height: 10px;
-            color: white;
-            font-size: 10px;
-            right: 0;
-            bottom: -1px;
-            &:before {
-                content: "\e611";
-                font-family: kuma !important;
-            }
-        }
+  &.multiple-active {
+    padding: 0 20px;
+  }
+  &.active {
+    border-color: @brand-primary-light;
+    background: white;
+    background: linear-gradient(-45deg, transparent 11px, white 0), linear-gradient(45deg, transparent 15px, @brand-primary-light 0);
+    position: relative;
+    color: @text-primary-color;
+    i.kuma-pickable-item-icon-hook {
+      position: absolute;
+      height: 10px;
+      line-height: 10px;
+      color: white;
+      font-size: 10px;
+      right: 0;
+      bottom: -1px;
+      &:before {
+        content: "\e611";
+        font-family: kuma !important;
+      }
     }
-
+  }
 }
-
-
-
-

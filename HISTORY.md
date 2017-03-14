@@ -1,3 +1,9 @@
+# 2.0.0
+
+* `CHANGED` style change
+* `CHANGED` add x if item is actived in multiple mode
+* `CHANGED` update ReadMe
+
 # 1.1.2
 
 * `CHANGED` small style change in hook mode 
