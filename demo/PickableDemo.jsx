@@ -16,13 +16,16 @@ class Demo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: [1],
+      value1: [1],
+      value2: [1],
+      value3: [1],
+      value4: [1],
     };
   }
 
-  handleChange(value) {
+  handleChange(num, value) {
     this.setState({
-      value,
+      [`value${num}`]: value,
     });
   }
 
@@ -42,7 +45,10 @@ class Demo extends React.Component {
       <div>
         <div>
           <h2>普通</h2>
-          <Pickable onChange={this.handleChange.bind(this)} value={this.state.value}>
+          <Pickable
+            onChange={this.handleChange.bind(this, 1)}
+            value={this.state.value1}
+          >
             {items.map((item, index) => (
               <Item
                 key={index}
@@ -55,8 +61,8 @@ class Demo extends React.Component {
         <div>
           <h2>普通 / 单选</h2>
           <Pickable
-            onChange={this.handleChange.bind(this)}
-            value={this.state.value}
+            onChange={this.handleChange.bind(this, 2)}
+            value={this.state.value2}
             multiple={false}
           >
             {items.map((item, index) => (
@@ -70,7 +76,7 @@ class Demo extends React.Component {
         </div>
         <div>
           <h2>简单</h2>
-          <Pickable onChange={this.handleChange.bind(this)} value={this.state.value} type="simple">
+          <Pickable onChange={this.handleChange.bind(this, 3)} value={this.state.value3} type="simple">
             {items.map((item, index) => (
               <Item
                 key={index}
@@ -82,7 +88,7 @@ class Demo extends React.Component {
         </div>
         <div>
           <h2>钩子</h2>
-          <Pickable onChange={this.handleChange.bind(this)} value={this.state.value} type="hook">
+          <Pickable onChange={this.handleChange.bind(this, 4)} value={this.state.value4} type="hook">
             {items.map((item, index) => (
               <Item
                 key={index}

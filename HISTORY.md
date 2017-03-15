@@ -1,3 +1,7 @@
+# 2.0.1
+
+* `FIXED` value will change even if other instance change
+
 # 2.0.0
 
 * `CHANGED` style change

@@ -15,7 +15,7 @@ class Pickable extends React.Component {
 
   handleItemClick(value) {
     const me = this;
-    const [...values] = me.props.value;
+    const values = me.props.value.slice(0);
     const index = values.indexOf(value);
     if (!me.props.multiple) {
       me.props.onChange([value], value);
