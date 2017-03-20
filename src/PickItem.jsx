@@ -17,9 +17,6 @@ class PickItem extends React.Component {
     } else if (type === 'hook') {
       return <i className={`${prefixCls}-icon-hook`} />;
     }
-    if (multiple && active) {
-      return <span className={`${prefixCls}-icon-clear`}>×</span>;
-    }
     return null;
   }
 
