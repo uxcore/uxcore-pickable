@@ -84,7 +84,7 @@
   &.active {
     border-color: @brand-primary-light;
     background: white;
-    background: linear-gradient(-45deg, transparent 11px, white 0), linear-gradient(45deg, transparent 15px, @brand-primary-light 0);
+    background: linear-gradient(-45deg, transparent 11px, white 0), @brand-primary;
     position: relative;
     color: @text-primary-color;
     i.kuma-pickable-item-icon-hook {
@@ -95,9 +95,10 @@
       font-size: 10px;
       right: 0;
       bottom: -1px;
+      transform: scale(0.7);
       &:before {
-        content: "\e611";
-        font-family: kuma !important;
+        content: "\e6af";
+        font-family: uxcore !important;
       }
     }
   }

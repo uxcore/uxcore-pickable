@@ -1,3 +1,7 @@
+# 2.0.3
+
+* `CHANGED` hook icon change
+
 # 2.0.1
 
 * `FIXED` value will change even if other instance change
