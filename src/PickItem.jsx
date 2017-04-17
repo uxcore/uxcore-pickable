@@ -11,10 +11,10 @@ class PickItem extends React.Component {
 
   renderTips() {
     const me = this;
-    const { type, prefixCls, number, multiple, active } = me.props;
+    const { type, prefixCls, number } = me.props;
     if (type === 'simple' && number !== undefined) {
       return <span className={`${prefixCls}-num`}>{number}</span>;
-    } else if (type === 'hook') {
+    } else if (type === 'hook' || type === 'simpleHook') {
       return <i className={`${prefixCls}-icon-hook`} />;
     }
     return null;
@@ -32,6 +32,7 @@ class PickItem extends React.Component {
           'multiple-active': active && multiple,
           [`${prefixCls}-simple`]: type === 'simple',
           [`${prefixCls}-hook`]: type === 'hook',
+          [`${prefixCls}-hook-simple`]: type === 'simpleHook',
         })} onClick={me.handleClick.bind(me, value)}
       >
         {children}
@@ -57,7 +58,7 @@ PickItem.propTypes = {
   onClick: React.PropTypes.func,
   // only useful in simple type now.
   number: React.PropTypes.number,
-  type: React.PropTypes.oneOf(['normal', 'simple', 'hook']),
+  type: React.PropTypes.oneOf(['normal', 'simple', 'hook', 'simpleHook']),
 };
 
 PickItem.displayName = 'PickItem';

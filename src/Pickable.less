@@ -77,7 +77,8 @@
   }
 }
 
-.@{__pickable_prefix_cls}-item-hook {
+.@{__pickable_prefix_cls}-item-hook,
+.@{__pickable_prefix_cls}-item-hook-simple {
   &.multiple-active {
     padding: 0 20px;
   }
@@ -101,5 +102,19 @@
         font-family: uxcore !important;
       }
     }
+  }
+}
+
+.@{__pickable_prefix_cls}-item-hook-simple {
+  border-color: transparent;
+  &:hover {
+    border-color: transparent;
+  }
+  &.active {
+    border-color: @brand-primary-light;
+  }
+  &.disabled {
+    background: transparent;
+    border-color: transparent;
   }
 }

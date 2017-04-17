@@ -1,3 +1,7 @@
+# 2.1.0
+
+* `CHANGED` prop `type` support `simpleHook`
+
 # 2.0.3
 
 * `CHANGED` hook icon change
