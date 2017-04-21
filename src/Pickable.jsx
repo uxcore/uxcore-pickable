@@ -76,7 +76,7 @@ Pickable.propTypes = {
   value: React.PropTypes.array,
   multiple: React.PropTypes.bool,
   onChange: React.PropTypes.func,
-  type: React.PropTypes.oneOf(['normal', 'simple', 'hook']),
+  type: React.PropTypes.oneOf(['normal', 'simple', 'hook', 'simpleHook']),
   max: React.PropTypes.number,
 };
 

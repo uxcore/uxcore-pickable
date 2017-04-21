@@ -1,3 +1,7 @@
+# 2.1.1
+
+* `FIXED` fix propType check.
+
 # 2.1.0
 
 * `CHANGED` prop `type` support `simpleHook`
