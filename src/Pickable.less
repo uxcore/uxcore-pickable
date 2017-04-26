@@ -10,7 +10,9 @@
 .@{__pickable_prefix_cls}-item {
   display: inline-block;
   height: 28px;
-  padding: 0 20px;
+  padding: 0 12px;
+  min-width: 68px;
+  text-align: center;
   line-height: 26px;
   border: 1px solid @border-color;
   margin-right: 4px;
@@ -80,7 +82,7 @@
 .@{__pickable_prefix_cls}-item-hook,
 .@{__pickable_prefix_cls}-item-hook-simple {
   &.multiple-active {
-    padding: 0 20px;
+    padding: 0 12px;
   }
   &.active {
     border-color: @brand-primary-light;
