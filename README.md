@@ -92,6 +92,9 @@ http://uxco.re/components/pickable/
 |multiple|bool|optional|true|是否多选|
 |max|number|optional|99|最大显示的数字，超过 max，显示 max+，2.0 版本后此项废弃，改为传入 children 时实现。|
 |type|string|optional|normal|样式风格，可选值为 `normal`, `simple`, `hook`, `simpleHook`|
+|defaultfoldItems|bool|optional|true|是否在折行的情况下默认折叠|
+|maxLines|number|optonal|1|超过几行的情况下使用折叠|
+|locale|string|optional|zh-cn|国际化,zh-cn/en-us|
 
 ## Item Props
 

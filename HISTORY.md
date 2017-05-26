@@ -1,3 +1,7 @@
+# 3.0.0
+
+* `NEW` add new prop `defaultFoldItems`， `locale`, `maxLines`
+
 # 2.1.1
 
 * `FIXED` fix propType check.

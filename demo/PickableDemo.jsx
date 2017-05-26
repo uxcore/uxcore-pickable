@@ -36,10 +36,22 @@ class Demo extends React.Component {
     }, {
       text: '条件二',
       value: 2,
+      disable: true,
     }, {
       text: '条件三',
       value: 3,
-      disable: true,
+    }, {
+      text: '条件四',
+      value: 4,
+    }, {
+      text: '条件五',
+      value: 5,
+    }, {
+      text: '条件六',
+      value: 6,
+    }, {
+      text: '条件七',
+      value: 7,
     }];
     return (
       <div>
@@ -48,6 +60,8 @@ class Demo extends React.Component {
           <Pickable
             onChange={this.handleChange.bind(this, 1)}
             value={this.state.value1}
+            locale={'en-us'}
+            maxLines={2}
           >
             {items.map((item, index) => (
               <Item

@@ -1,6 +1,6 @@
 {
  "name": "uxcore-pickable",
- "version": "2.1.2",
+ "version": "3.0.0",
  "description": "uxcore-pickable component for uxcore.",
  "repository": "https://github.com/uxcore/uxcore-pickable.git",
  "author": "onbing",
@@ -44,7 +44,8 @@
  "dependencies": {
   "classnames": "^2.1.2",
   "object-assign": "^4.0.0",
-  "uxcore-icon": "^0.1.4"
+  "rc-util": "^4.0.4",
+  "uxcore-icon": "^0.1.14"
  },
  "contributors": [],
  "license": "MIT"

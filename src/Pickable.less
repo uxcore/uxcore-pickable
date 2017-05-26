@@ -7,6 +7,47 @@
  */
 
 @__pickable_prefix_cls: kuma-pickable;
+.@{__pickable_prefix_cls} {
+  display: table;
+}
+
+.@{__pickable_prefix_cls}-table,
+.@{__pickable_prefix_cls}-toggle-more {
+  display: table-cell;
+}
+
+.@{__pickable_prefix_cls}-toggle-more {
+  width: 56px;
+  padding-left: 16px;
+  color: @brand-link;
+  cursor: pointer;
+  &-icon {
+    font-size: 12px;
+    margin-left: 4px;
+    transition: transform 0.2s @transition-ease;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    transform-origin: center center;
+    position: relative;
+    transform: rotate(180deg);
+    top: -2px;
+  }
+  &__fold {
+    .@{__pickable_prefix_cls}-toggle-more-icon {
+      transform: rotate(0deg);
+      top: 0px;
+    }
+  }
+}
+
+.@{__pickable_prefix_cls}-items {
+  &__fold {
+    height: 36px;
+    overflow: hidden;
+  }
+}
+
 .@{__pickable_prefix_cls}-item {
   display: inline-block;
   height: 28px;
