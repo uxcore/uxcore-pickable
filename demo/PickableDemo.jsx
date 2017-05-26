@@ -62,6 +62,7 @@ class Demo extends React.Component {
             value={this.state.value1}
             locale={'en-us'}
             maxLines={2}
+            enableFold
           >
             {items.map((item, index) => (
               <Item

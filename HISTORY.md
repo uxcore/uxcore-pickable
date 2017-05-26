@@ -1,3 +1,7 @@
+# 3.1.0
+
+* `CHANGED` add new prop `enableFold`
+
 # 3.0.0
 
 * `NEW` add new prop `defaultFoldItems`， `locale`, `maxLines`

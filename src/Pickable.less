@@ -11,7 +11,6 @@
   display: table;
 }
 
-.@{__pickable_prefix_cls}-table,
 .@{__pickable_prefix_cls}-toggle-more {
   display: table-cell;
 }
@@ -21,6 +20,9 @@
   padding-left: 16px;
   color: @brand-link;
   cursor: pointer;
+  .@{__pickable_prefix_cls}-en & {
+    width: 66px;
+  }
   &-icon {
     font-size: 12px;
     margin-left: 4px;

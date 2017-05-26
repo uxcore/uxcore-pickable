@@ -27,11 +27,22 @@ class Pickable extends React.Component {
 
 
   componentDidMount() {
-    this.adjustToggleMore();
-    this.toggleListener = addEventListener(window, 'resize', this.adjustToggleMore);
+    if (this.props.enableFold) {
+      this.adjustToggleMore();
+      this.toggleListener = addEventListener(window, 'resize', this.adjustToggleMore);
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.enableFold) {
+      this.adjustToggleMore();
+    }
   }
 
   adjustToggleMore() {
+    if (!this.props.enableFold) {
+      return;
+    }
     if (this.rootWidth && this.rootWidth === parseInt(this.root.clientWidth, 10)) {
       return;
     }
@@ -123,12 +134,13 @@ class Pickable extends React.Component {
 
   render() {
     const me = this;
-    const { prefixCls, className } = me.props;
+    const { prefixCls, className, locale } = me.props;
     return (
       <div
         className={classnames({
           [`${prefixCls}`]: true,
           [className]: !!className,
+          [`${prefixCls}-en`]: locale === 'en-us',
         })}
         ref={(c) => { this.root = c; }}
       >
@@ -144,6 +156,7 @@ Pickable.defaultProps = {
   value: [],
   type: 'normal',
   multiple: true,
+  enableFold: false,
   defaultfoldItems: true,
   locale: 'zh-cn',
   onChange: () => {
@@ -158,6 +171,7 @@ Pickable.propTypes = {
   locale: React.PropTypes.string,
   value: React.PropTypes.array,
   multiple: React.PropTypes.bool,
+  enableFold: React.PropTypes.bool,
   defaultfoldItems: React.PropTypes.bool,
   onChange: React.PropTypes.func,
   type: React.PropTypes.oneOf(['normal', 'simple', 'hook', 'simpleHook']),
