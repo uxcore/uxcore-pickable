@@ -1,3 +1,7 @@
+# 3.1.1
+
+* `FIXED` iteration bug when rootWidth is 0
+
 # 3.1.0
 
 * `CHANGED` add new prop `enableFold`

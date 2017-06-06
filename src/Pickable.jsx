@@ -43,7 +43,7 @@ class Pickable extends React.Component {
     if (!this.props.enableFold) {
       return;
     }
-    if (this.rootWidth && this.rootWidth === parseInt(this.root.clientWidth, 10)) {
+    if (this.rootWidth !== undefined && this.rootWidth === parseInt(this.root.clientWidth, 10)) {
       return;
     }
     const itemsInner = this.itemsInner;
