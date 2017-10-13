@@ -91,7 +91,11 @@ class Demo extends React.Component {
         </div>
         <div>
           <h2>简单</h2>
-          <Pickable onChange={this.handleChange.bind(this, 3)} value={this.state.value3} type="simple">
+          <Pickable
+            onChange={this.handleChange.bind(this, 3)}
+            value={this.state.value3}
+            type="simple"
+          >
             {items.map((item, index) => (
               <Item
                 key={index}
@@ -103,7 +107,11 @@ class Demo extends React.Component {
         </div>
         <div>
           <h2>钩子</h2>
-          <Pickable onChange={this.handleChange.bind(this, 4)} value={this.state.value4} type="hook">
+          <Pickable
+            onChange={this.handleChange.bind(this, 4)}
+            value={this.state.value4}
+            type="hook"
+          >
             {items.map((item, index) => (
               <Item
                 key={index}
@@ -113,7 +121,11 @@ class Demo extends React.Component {
             ))}
           </Pickable>
           <h2>简单钩子</h2>
-          <Pickable onChange={this.handleChange.bind(this, 4)} value={this.state.value4} type="simpleHook">
+          <Pickable
+            onChange={this.handleChange.bind(this, 4)}
+            value={this.state.value4}
+            type="simpleHook"
+          >
             {items.map((item, index) => (
               <Item
                 key={index}

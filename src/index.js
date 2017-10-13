@@ -6,4 +6,6 @@
  * All rights reserved.
  */
 
-export default from './Pickable';
+import Pickable from './Pickable';
+
+export default Pickable;
