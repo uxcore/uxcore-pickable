@@ -6,5 +6,5 @@
  * All rights reserved.
  */
 
- var Demo = require('./PickableDemo');
+ import Demo from './PickableDemo';
  ReactDOM.render(<Demo/>, document.getElementById('UXCoreDemo'));

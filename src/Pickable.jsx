@@ -6,12 +6,13 @@
  * All rights reserved.
  */
 
-const classnames = require('classnames');
-const React = require('react');
-const Icon = require('uxcore-icon');
-const addEventListener = require('rc-util/lib/Dom/addEventListener');
-const Item = require('./PickItem');
-const i18n = require('./locale');
+import classnames from 'classnames';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Icon from 'uxcore-icon';
+import addEventListener from 'rc-util/lib/Dom/addEventListener';
+import Item from './PickItem';
+import i18n from './locale';
 
 
 class Pickable extends React.Component {
@@ -166,21 +167,21 @@ Pickable.defaultProps = {
 
 // http://facebook.github.io/react/docs/reusable-components.html
 Pickable.propTypes = {
-  prefixCls: React.PropTypes.string,
-  className: React.PropTypes.string,
-  locale: React.PropTypes.string,
-  value: React.PropTypes.array,
-  multiple: React.PropTypes.bool,
-  enableFold: React.PropTypes.bool,
-  defaultfoldItems: React.PropTypes.bool,
-  onChange: React.PropTypes.func,
-  type: React.PropTypes.oneOf(['normal', 'simple', 'hook', 'simpleHook']),
-  max: React.PropTypes.number,
-  maxLines: React.PropTypes.number,
+  prefixCls: PropTypes.string,
+  className: PropTypes.string,
+  locale: PropTypes.string,
+  value: PropTypes.array,
+  multiple: PropTypes.bool,
+  enableFold: PropTypes.bool,
+  defaultfoldItems: PropTypes.bool,
+  onChange: PropTypes.func,
+  type: PropTypes.oneOf(['normal', 'simple', 'hook', 'simpleHook']),
+  max: PropTypes.number,
+  maxLines: PropTypes.number,
 };
 
 Pickable.displayName = 'Pickable';
 
 Pickable.Item = Item;
 
-module.exports = Pickable;
+export default Pickable;

@@ -6,8 +6,8 @@
  * All rights reserved.
  */
 
-const React = require('react');
-const Pickable = require('../src');
+import React from 'react';
+import Pickable from '../src';
 
 const { Item } = Pickable;
 
@@ -127,4 +127,4 @@ class Demo extends React.Component {
   }
 }
 
-module.exports = Demo;
+export default Demo;

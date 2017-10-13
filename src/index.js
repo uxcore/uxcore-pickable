@@ -6,4 +6,4 @@
  * All rights reserved.
  */
 
-module.exports = require('./Pickable');
+export default from './Pickable';

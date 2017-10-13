@@ -1,5 +1,6 @@
-const React = require('react');
-const classnames = require('classnames');
+import React from 'react';
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 class PickItem extends React.Component {
 
@@ -47,20 +48,20 @@ PickItem.defaultProps = {
 };
 
 PickItem.propTypes = {
-  prefixCls: React.PropTypes.string,
-  active: React.PropTypes.bool,
-  disabled: React.PropTypes.bool,
-  multiple: React.PropTypes.bool,
-  value: React.PropTypes.oneOfType([
-    React.PropTypes.number,
-    React.PropTypes.string,
+  prefixCls: PropTypes.string,
+  active: PropTypes.bool,
+  disabled: PropTypes.bool,
+  multiple: PropTypes.bool,
+  value: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
   ]),
-  onClick: React.PropTypes.func,
+  onClick: PropTypes.func,
   // only useful in simple type now.
-  number: React.PropTypes.number,
-  type: React.PropTypes.oneOf(['normal', 'simple', 'hook', 'simpleHook']),
+  number: PropTypes.number,
+  type: PropTypes.oneOf(['normal', 'simple', 'hook', 'simpleHook']),
 };
 
 PickItem.displayName = 'PickItem';
 
-module.exports = PickItem;
+export default PickItem;
