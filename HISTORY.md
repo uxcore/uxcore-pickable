@@ -1,3 +1,7 @@
+# 3.1.2
+
+* `CHANGED` update to react 15.x
+
 # 3.1.1
 
 * `FIXED` iteration bug when rootWidth is 0

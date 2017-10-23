@@ -6,5 +6,8 @@
  * All rights reserved.
  */
 
- var Demo = require('./PickableDemo');
- ReactDOM.render(<Demo/>, document.getElementById('UXCoreDemo'));
+ import React from 'react';
+ import ReactDOM from 'react-dom';
+ import Demo from './PickableDemo';
+
+ ReactDOM.render(<Demo />, document.getElementById('UXCoreDemo'));
