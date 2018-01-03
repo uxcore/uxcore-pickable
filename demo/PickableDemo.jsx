@@ -56,6 +56,20 @@ class Demo extends React.Component {
     return (
       <div>
         <div>
+        <div style={{ width: 400 }}>
+            <Pickable value={this.state.value} enableFold>
+                <Pickable.Item value="a">Item A</Pickable.Item>
+                <Pickable.Item value="b">Item B</Pickable.Item>
+                <Pickable.Item value="c">Item C</Pickable.Item>
+                <Pickable.Item value="d">Item D</Pickable.Item>
+                <Pickable.Item value="e">Item E</Pickable.Item>
+                <Pickable.Item value="f">Item F</Pickable.Item>
+                <Pickable.Item value="g">Item G</Pickable.Item>
+                <Pickable.Item value="h">Item H</Pickable.Item>
+                <Pickable.Item value="i">Item I</Pickable.Item>
+                <Pickable.Item value="j">Item J</Pickable.Item>
+            </Pickable>
+        </div>
           <h2>普通</h2>
           <Pickable
             onChange={this.handleChange.bind(this, 1)}
@@ -69,6 +83,7 @@ class Demo extends React.Component {
                 key={index}
                 value={item.value}
                 disabled={item.disable}
+                onClick={() => console.log('123')}
               >{item.text}</Item>
             ))}
           </Pickable>
