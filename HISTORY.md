@@ -1,3 +1,7 @@
+# 4.0.0
+
+* `CHANGED` update to react 16.x
+
 # 3.1.2
 
 * `CHANGED` update to react 15.x
