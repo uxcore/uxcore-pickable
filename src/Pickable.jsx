@@ -128,7 +128,7 @@ class Pickable extends React.Component {
         }}
       >
         {i18n[locale][!this.state.foldItems ? 'fold' : 'unfold']}
-        <Icon name="bottom" className={`${prefixCls}-toggle-more-icon`} />
+        <Icon name="bottom" className={`${prefixCls}-toggle-more-icon`} usei />
       </div>
     );
   }
