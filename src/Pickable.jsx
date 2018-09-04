@@ -16,7 +16,6 @@ import i18n from './locale';
 
 
 class Pickable extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -62,12 +61,12 @@ class Pickable extends React.Component {
 
   handleItemClick(value) {
     const me = this;
-    const values = me.props.value.slice(0);
-    const index = values.indexOf(value);
     if (!me.props.multiple) {
-      me.props.onChange([value], value);
+      me.props.onChange(me.props.simpleValueInSingleMode ? value : [value], value);
       return;
     }
+    const values = me.props.value.slice(0);
+    const index = values.indexOf(value);
     if (index !== -1) {
       values.splice(index, 1);
       me.props.onChange(values, value);
@@ -85,10 +84,13 @@ class Pickable extends React.Component {
 
   renderChildren() {
     const me = this;
-    const state = this.state;
-    const { prefixCls, type, children, value, max, multiple, maxLines } = me.props;
+    const { state } = this;
+    const {
+      prefixCls, type, children, value, max, multiple, maxLines,
+    } = me.props;
+    const newValue = Array.isArray(value) ? value : [value];
     const rendered = React.Children.map(children, child => React.cloneElement(child, {
-      active: value.indexOf(child.props.value) !== -1,
+      active: newValue.indexOf(child.props.value) !== -1,
       prefixCls: `${prefixCls}-item`,
       multiple,
       type,
@@ -157,8 +159,11 @@ Pickable.defaultProps = {
   value: [],
   type: 'normal',
   multiple: true,
+  simpleValueInSingleMode: false,
   enableFold: false,
   defaultfoldItems: true,
+  className: undefined,
+  max: undefined,
   locale: 'zh-cn',
   onChange: () => {
   },
@@ -170,7 +175,11 @@ Pickable.propTypes = {
   prefixCls: PropTypes.string,
   className: PropTypes.string,
   locale: PropTypes.string,
-  value: PropTypes.array,
+  value: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.number,
+    PropTypes.string,
+  ]),
   multiple: PropTypes.bool,
   enableFold: PropTypes.bool,
   defaultfoldItems: PropTypes.bool,
@@ -178,6 +187,7 @@ Pickable.propTypes = {
   type: PropTypes.oneOf(['normal', 'simple', 'hook', 'simpleHook']),
   max: PropTypes.number,
   maxLines: PropTypes.number,
+  simpleValueInSingleMode: PropTypes.bool,
 };
 
 Pickable.displayName = 'Pickable';

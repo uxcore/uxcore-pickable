@@ -1,3 +1,7 @@
+# 4.1.0
+
+* `NEW` new prop `simpleValueInSingleMode`
+
 # 4.0.0
 
 * `CHANGED` update to react 16.x

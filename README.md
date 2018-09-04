@@ -96,6 +96,7 @@ http://uxco.re/components/pickable/
 |defaultfoldItems|bool|optional|true|是否在折行的情况下默认折叠, 3.0 版本后支持|
 |maxLines|number|optonal|1|超过几行的情况下使用折叠, 3.0 版本后支持|
 |locale|string|optional|zh-cn|国际化,zh-cn/en-us, 3.0 版本后支持|
+|simpleValueInSingleMode|bool|optional|false|单选时，输出和接收的值变成简单的值类型，而非数组，从 [1] 变成 1|
 
 ## Item Props
 
