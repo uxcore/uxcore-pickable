@@ -6,21 +6,21 @@
  * All rights reserved.
  */
 
-@__pickable_prefix_cls: kuma-pickable;
-.@{__pickable_prefix_cls} {
+@__pickablePrefixCls: kuma-pickable;
+.@{__pickablePrefixCls} {
   display: table;
 }
 
-.@{__pickable_prefix_cls}-toggle-more {
+.@{__pickablePrefixCls}-toggle-more {
   display: table-cell;
 }
 
-.@{__pickable_prefix_cls}-toggle-more {
+.@{__pickablePrefixCls}-toggle-more {
   width: 56px;
   padding-left: 16px;
   color: @brand-link;
   cursor: pointer;
-  .@{__pickable_prefix_cls}-en & {
+  .@{__pickablePrefixCls}-en & {
     width: 66px;
   }
   &-icon {
@@ -36,21 +36,21 @@
     top: -2px;
   }
   &__fold {
-    .@{__pickable_prefix_cls}-toggle-more-icon {
+    .@{__pickablePrefixCls}-toggle-more-icon {
       transform: rotate(0deg);
       top: 0px;
     }
   }
 }
 
-.@{__pickable_prefix_cls}-items {
+.@{__pickablePrefixCls}-items {
   &__fold {
     height: 36px;
     overflow: hidden;
   }
 }
 
-.@{__pickable_prefix_cls}-item {
+.@{__pickablePrefixCls}-item {
   display: inline-block;
   height: 28px;
   padding: 0 12px;
@@ -80,13 +80,13 @@
     border-color: @bg-disabled-color;
     cursor: not-allowed;
   }
-  .@{__pickable_prefix_cls}-item-icon-clear {
+  .@{__pickablePrefixCls}-item-icon-clear {
     font-weight: 700;
     padding-left: 9px;
   }
 }
 
-.@{__pickable_prefix_cls}-item-simple {
+.@{__pickablePrefixCls}-item-simple {
   border: 1px solid transparent;
   background: white;
   margin-right: 4px;
@@ -99,7 +99,7 @@
     border-color: @brand-primary;
     background: @brand-primary;
     color: white;
-    .@{__pickable_prefix_cls}-item-num {
+    .@{__pickablePrefixCls}-item-num {
       background: transparent;
       color: white;
     }
@@ -110,7 +110,7 @@
     border-color: transparent;
     cursor: not-allowed;
   }
-  .@{__pickable_prefix_cls}-item-num {
+  .@{__pickablePrefixCls}-item-num {
     background: @basic-400;
     color: @text-thirdary-color;
     display: inline-block;
@@ -122,8 +122,8 @@
   }
 }
 
-.@{__pickable_prefix_cls}-item-hook,
-.@{__pickable_prefix_cls}-item-hook-simple {
+.@{__pickablePrefixCls}-item-hook,
+.@{__pickablePrefixCls}-item-hook-simple {
   &.multiple-active {
     padding: 0 12px;
   }
@@ -150,7 +150,7 @@
   }
 }
 
-.@{__pickable_prefix_cls}-item-hook-simple {
+.@{__pickablePrefixCls}-item-hook-simple {
   border-color: transparent;
   &:hover {
     border-color: transparent;
