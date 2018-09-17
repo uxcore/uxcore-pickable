@@ -1,3 +1,7 @@
+# 4.1.1
+
+* `CHANGED` support js style export
+
 # 4.1.0
 
 * `NEW` new prop `simpleValueInSingleMode`
